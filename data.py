@@ -20,10 +20,10 @@ class Data:
 
     def list_to_dict(self, data_list):
         for line in data_list:
-            D = dict(zip(['state', 'mode', 'gender', 'year', 'result'], line))
-            D['year'] = int(D['year'])
-            D['result'] = int (D['result'])
-            self.data_dicts.append(D)
+            d = dict(zip(['state', 'mode', 'gender', 'year', 'result'], line))
+            d['year'] = int(d['year'])
+            d['result'] = int (d['result'])
+            self.data_dicts.append(d)
 
     @staticmethod
     def get_csv_link():
@@ -39,12 +39,11 @@ class Data:
                   ('¿', 'ż'),
                   ('', 'ź'),
                   ('¹', 'ą'),
-                  ('', 'ś'),
+                  ('', 'Ś'),
                   ('æ', 'ć'),
-                  ('£', 'ł'),
+                  ('£', 'Ł'),
                   ('ñ', 'ń'),
                   ('\x9c', 'ś')]
         for char in parser:
             text = text.replace(char[0], char[1])
         return text
-
