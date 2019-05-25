@@ -1,5 +1,6 @@
 import requests
 import urllib.request
+import sqlite3
 
 
 class Data:
@@ -47,3 +48,33 @@ class Data:
         for char in parser:
             text = text.replace(char[0], char[1])
         return text
+
+    def load_to_local_db(self):
+        conn = sqlite3.connect('matura.db')
+        c = conn.cursor()
+
+        c.execute("""CREATE TABLE matura (
+                    state text,
+                    mode text,
+                    gender text,
+                    year integer,
+                    result integer
+                    )""")
+        for record in self.data_dicts:
+            c.execute('INSERT INTO matura VALUES (?, ?, ?, ?, ?)', (record['state'],
+                                                                    record['mode'],
+                                                                    record['gender'],
+                                                                    record['year'],
+                                                                    record['result']))
+        conn.commit()
+        conn.close()
+
+    @staticmethod
+    def load_from_local_db():
+        conn = sqlite3.connect('matura.db')
+        c = conn.cursor()
+        data_dicts = []
+        c.execute('SELECT * FROM matura')
+        for record in c.fetchall():
+            data_dicts.append(dict(zip(['state', 'mode', 'gender', 'year', 'result'], list(record))))
+        return data_dicts
