@@ -11,20 +11,20 @@ To get started with program, run the following in a virtual environment:
 pip install requests
 
 ## Usage
-### General using 
+### General using:
 To run program you need to open virtual environment and run command:
 python matura.py + Choosen command line arguments
 
 ### Available arguments:
--w --wojewodztwo {state}
--p --plec {m} or {k}
--s --srednia {year}
--z --zdawalnosc
--n --najlepsze {year}
--r --regresja
--x {state}
--y {state}
--l --lokalne
+-w --wojewodztwo {state}\n
+-p --plec {m} or {k}\n
+-s --srednia {year}\n
+-z --zdawalnosc\n
+-n --najlepsze {year}\n
+-r --regresja\n
+-x {state}\n
+-y {state}\n
+-l --lokalne\n
 
 ### Counting average number of student taking exam for a given state from 2010 to specified year:
 for example:
