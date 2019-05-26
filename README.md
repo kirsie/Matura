@@ -18,15 +18,15 @@ To run program you need to open virtual environment and run command:
 *python matura.py + Choosen command line arguments*
 
 ### Available arguments:
-- w --wojewodztwo {state}  
-- p --plec {m} or {k}  
-- s --srednia {year}  
-- z --zdawalnosc  
-- n --najlepsze {year}  
-- r --regresja  
-- x {state}  
-- y {state}  
-- l --lokalne  
+- -w --wojewodztwo {state}  
+- -p --plec {m} or {k}  
+- -s --srednia {year}  
+- -z --zdawalnosc  
+- -n --najlepsze {year}  
+- -r --regresja  
+- -x {state}  
+- -y {state}  
+- -l --lokalne  
 
 ### Counting average number of students:
 for example:  
@@ -52,7 +52,6 @@ Best state in 2010 for men:*
 *python matura.py --najlepsze --plec m*  
 
 ### Compare two states:
-for example:  
 *python matura.py -x Pomorskie -y Opolskie*  
 
 *python matura.py -x Pomorskie -y Opolskie -p m*  
