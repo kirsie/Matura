@@ -48,7 +48,7 @@ Pass rate for Pomorskie for men:
 Best state in 2010 for all:    
 *python matura.py -n 2010*   
 
-Best state in 2010 for men:
+Best state in 2010 for men:  
 *python matura.py --najlepsze 2010 --plec m*  
 
 ### Compare two states:
