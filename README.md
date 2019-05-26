@@ -61,7 +61,7 @@ python matura.py -r*
 
 python matura.py -r -p m*  
 
-### Additional argument --lokalnie
-When you add --lokalnie or -l to your command line argument, program will use data from your local disk (if data base exist),    or it will create local data from remote data and then use it. 
+### Additional argument --lokalne
+When you add --lokalne or -l to your command line argument, program will use data from your local disk if matura.db file exist, if not program will create local data from remote data, store it in matura.db file and then use it. 
  
 
