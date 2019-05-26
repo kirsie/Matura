@@ -48,7 +48,7 @@ Pass rate for Pomorskie for men:
 Best state in 2010 for all:    
 *python matura.py -n 2010*   
 
-Best state in 2010 for men:*    
+Best state in 2010 for men:
 *python matura.py --najlepsze 2010 --plec m*  
 
 ### Compare two states:
@@ -57,9 +57,9 @@ Best state in 2010 for men:*
 *python matura.py -x Pomorskie -y Opolskie -p m*  
 
 ### Show regression:
-python matura.py -r*  
+*python matura.py -r*  
 
-python matura.py -r -p m*  
+*python matura.py -r -p m*  
 
 ### Additional argument --lokalne
 When you add --lokalne or -l to your command line arguments, program will use data from your local disk if **matura.db** file exist, if not program will create local data base from remote data, store it in **matura.db** file and then use it. 
