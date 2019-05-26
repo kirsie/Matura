@@ -18,41 +18,41 @@ To run program you need to open virtual environment and run command:
 *python matura.py + Choosen command line arguments*
 
 ### Available arguments:
--w --wojewodztwo {state}  
--p --plec {m} or {k}  
--s --srednia {year}  
--z --zdawalnosc  
--n --najlepsze {year}  
--r --regresja  
--x {state}  
--y {state}  
--l --lokalne  
+- w --wojewodztwo {state}  
+- p --plec {m} or {k}  
+- s --srednia {year}  
+- z --zdawalnosc  
+- n --najlepsze {year}  
+- r --regresja  
+- x {state}  
+- y {state}  
+- l --lokalne  
 
 ### Counting average number of students:
 for example:  
-Average in years 2010-2015 in Pomorskie for all:  
+Average in years 2010-2015 in Pomorskie for all:    
 *python matura.py --srednia 2015 --wojewodztwo Pomorskie*  
 
-Average in years 2010-2015 in Pomorskie for women:  
+Average in years 2010-2015 in Pomorskie for women:    
 *python matura.py -s 2015 -w Pomorskie -p k*
 
 ### Counting pass rate of a given state:
 for example:  
-Pass rate for Pomorskie for all:  
+Pass rate for Pomorskie for all:    
 *python matura.py --zdawalnosc -wojewodztwo Pomorskie*  
 
-Pass rate for Pomorskie for men:  
+Pass rate for Pomorskie for men:    
 *python matura.py -z -w Pomorskie -p m*  
 
 ### Counting best state in given year
-Best state in 2010 for all:  
+Best state in 2010 for all:    
 *python matura.py -n 2010*   
 
-Best state in 2010 for men:*  
+Best state in 2010 for men:*    
 *python matura.py --najlepsze --plec m*  
 
 ### Compare two states:
-for example:
+for example:  
 *python matura.py -x Pomorskie -y Opolskie*  
 
 *python matura.py -x Pomorskie -y Opolskie -p m*  
